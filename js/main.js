@@ -77,6 +77,3 @@ function formatDate(dateStr) {
     const date = new Date(dateStr);
     return date.toLocaleDateString('en-US', { day: 'numeric', month: 'long' }); // e.g. 30 June
 }
-//TODO: Disply current, tommorrow, after-tomorrow dates
-//TODO: Tempratures for the 3 days
-//TODO: 
