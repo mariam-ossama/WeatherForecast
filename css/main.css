@@ -1,0 +1,191 @@
+:root{
+    --main-bg-color: #1E202B;
+    --sec-bg-color: #262936;
+    --white-color: #FFF;
+    --card-header-light: #2D303D;
+    --card-header-dark: #222531;
+    --card-body-light: #323544;
+    --card-body-dark: #262936;
+    --main-text-color: #BFC1C8;
+    --sec-text-color: #009AD8;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+    font-family: var(--font-family);
+}
+nav{
+    background-color: var(--main-bg-color) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: var(--white-color);
+    width: max-content;
+    padding: 0.25rem 1rem;
+    margin-left: .3125rem;
+    border: .0625rem solid transparent;
+    border-radius: 50rem;
+    transition: all .3s;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--bs-blue);
+    width: max-content;
+    border: .0625rem solid var(--bs-blue);
+    border-radius: 50rem;
+}
+.logo-img{
+    width: 40%;
+}
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#forecast{
+    background-image: url('../img/banner.png');
+    background-repeat: no-repeat;
+    height: 170vh;
+    background-color: var(--main-bg-color);
+}
+.search-bar{
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 35px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--main-bg-color);
+}
+.btn-primary {
+    color: #fff;
+    background-color: var(--sec-text-color);
+    border-color: var(--sec-text-color);
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--sec-text-color);
+    border-color: var(--sec-text-color);
+}
+.search-country-cont,.contact-cont{
+    position: relative;
+}
+.search-country-cont form button, .contact-cont form button{
+    position: absolute !important;
+    bottom: 50% !important;
+    right: .5rem !important;
+    transform: translateY(50%) !important;
+    color: var(--white-color) !important;
+    width: 100px;
+}
+.forecast-item-today .card-header, .forecast-item-after-tommorrow .card-header{
+    background-color: var(--card-header-light);
+}
+.forecast-item-today .card-body,.forecast-card-footer, .forecast-item-after-tommorrow .card-body{
+    background-color: var(--card-body-light);
+}
+.forecast-item-tommorrow .card-header{
+    background-color: var(--card-header-dark);
+}
+.forecast-item-tommorrow .card-body{
+    background-color: var(--card-body-dark);
+}
+.card{
+    background-color: var(--card-body-light);
+}
+.forecast-item-today span,
+.forecast-item-today p,
+.forecast-item-tommorrow span,
+.forecast-item-tommorrow h3,
+.forecast-item-after-tommorrow span,
+.forecast-item-after-tommorrow h3{
+    color: var(--main-text-color);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+#forecast h2{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+#forecast .large-fs{
+    font-size: 5.625rem;
+    line-height: 8.4375rem;
+    vertical-align: middle;
+    margin: 0 1.875rem 0 0;
+    font-weight: 700;
+}
+#forecast .card-text{
+    color: var(--sec-text-color);
+}
+.forecast-card-footer ul li{
+    margin: .9375rem;
+}
+footer{
+    background-color: var(--sec-bg-color);
+}
+footer p{
+    color: var(--main-text-color);
+}
+.subscribe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.contact-cont {
+    flex: 1;
+}
+
+.contact-cont form {
+    display: flex;
+    width: 100%;
+}
+
+.contact-cont form .search-bar {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+.social-sites ul {
+    display: flex;
+    gap: 0.5rem;
+}
+.social-sites ul li{
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    border: .0625rem solid var(--main-bg-color);
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+.social-sites ul li i{
+    color: var(--sec-text-color);
+    font-size: 1.25rem;
+    transition: color .5s;
+}
+.social-sites ul li:hover{
+    border: .0625rem solid var(--sec-text-color);
+    border-radius: 50%;
+    background-color: var(--sec-text-color);
+}
+.social-sites ul li:hover i{
+    color: var(--white-color);
+}
+footer .contact-cont form {
+    position: relative;
+    max-width: 800px;
+}
+footer .contact-cont form .search-bar {
+    width: 100%;
+}
+
+.form-control:focus{
+    color: gray;
+    background-color: var(--main-bg-color);
+    border-color: var(--main-bg-color);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem transparent;
+}

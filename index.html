@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-5" href="#">
+                <div class="logo-container">
+                    <div class="logo-img">
+                        <img src="img/logo@2x.png" alt="logo image" class="w-100">
+                    </div>
+                    <div class="text-white">
+                        <h1>Weather</h1>
+                        <p>tagline goes here</p>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 pe-5 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Live Cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photoes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="forecast">
+        <div class="container">
+            <div class="row">
+                <!--Country search bar-->
+                <div class="col-12 py-5">
+                    <div class="search-country-cont py-4">
+                        <form class="form-inline">
+                            <input id="searchCountryInput" class="form-control search-bar" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button id="submitCountryBtn" class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Find</button>
+                        </form>
+                    </div>
+                </div>
+                <!--FORCAST BODY-->
+                <div class="col-12">
+                    <div class="row">
+                            <div class="col-md-4">
+                                <div class="forecast-item-today h-100">
+                                    <div class="card h-100">
+                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                            <span>Monday</span>
+                                            <span>30 June</span>
+                                        </div>
+                                        <div class="card-body p-4">
+                                            <p id="countryForcast"></p>
+                                            <h2 class="card-title large-fs"></h2>
+                                            <!--DAY/NIGHT IMG-->
+                                            <img id="conditionImg" src="" alt="" class="w-25">
+                                            <p class="card-text"></p>
+                                        </div>
+                                        <div class="forecast-card-footer">
+                                            <ul class="list-unstyled d-flex ps-3">
+                                                <li>
+                                                    <img src="img/icon-umberella.png" alt="Humidity">
+                                                    <span id="humidity"></span>
+                                                </li>
+                                                <li>
+                                                    <img src="img/icon-wind.png" alt="Wind Speed">
+                                                    <span id="windSpeed"></span>
+                                                </li>
+                                                <li>
+                                                    <img src="img/icon-compass.png" alt="Wind Direction">
+                                                    <span id="windDirection"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="forecast-item-tommorrow text-center h-100">
+                                    <div class="card h-100">
+                                        <div class="card-header">
+                                            <span>Tuesday</span>
+                                        </div>
+                                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                            <!--DAY/NIGHT IMG-->
+                                            <img src="" alt="" class="w-25">
+                                            <h2 id="NextDayTempH" class="card-title"></h2>
+                                            <h3 class="card-subtitle"></h3>
+                                            <p class="card-text"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="forecast-item-after-tommorrow text-center h-100">
+                                    <div class="card h-100">
+                                        <div class="card-header">
+                                            <span>Wednesday</span>
+                                        </div>
+                                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                            <!--DAY/NIGHT IMG-->
+                                            <img src="" alt="" class="w-25">
+                                            <h2 id="afterNextDayTempH" class="card-title"></h2>
+                                            <h3 class="card-subtitle"></h3>
+                                            <p class="card-text"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-4">
+        <div class="container py-4">
+            <div class="subscribe">
+                <div class="contact-cont">
+                <form class="form-inline">
+                    <input class="form-control search-bar" type="search" placeholder="Enter your email to subscribe..." aria-label="Search">
+                    <button class="btn btn-primary rounded-pill my-2 my-sm-0" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="social-sites">
+                <ul class="list-unstyled d-flex">
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-twitter"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-google-plus-g"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-pinterest"></i>
+                </li>
+            </ul>
+            </div>
+            </div>
+            <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
