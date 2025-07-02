@@ -1,5 +1,5 @@
 const apiKey = '32802c5d33be484b96f210347250107';
-const baseUrl = 'http://api.weatherapi.com/v1';
+const baseUrl = 'https://api.weatherapi.com/v1';
 
 const searchCountryInput = document.getElementById('searchCountryInput');
 const submitCountryBtn = document.getElementById('submitCountryBtn');
