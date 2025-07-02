@@ -34,8 +34,8 @@ async function getWeatherConditions(country = 'Cairo') {
             countryForcast.nextElementSibling.innerHTML = `${current.temp_c} oC`;
             conditionImg.setAttribute('src',`${current.condition.icon}`);
             conditionImg.nextElementSibling.innerHTML = `${current.condition.text}`;
-            humidity.innerHTML = `${current.humidity}`;
-            windSpeed.innerHTML = `${current.wind_kph}`;
+            humidity.innerHTML = `${current.humidity} %`;
+            windSpeed.innerHTML = `${current.wind_kph} km/h`;
             windDirection.innerHTML = `${current.wind_dir}`;
             // next day
             const tomorrow = data.forecast.forecastday[1].day;
