@@ -23,7 +23,6 @@ async function getWeatherConditions(country = 'Cairo') {
         let data = await fetch(`${baseUrl}/forecast.json?key=${apiKey}&q=${country}&days=3&aqi=no&alerts=no`);
         if (data.status === 200) {
             data = await data.json();
-            console.log(data);
             // current day
             const current = data.current;
             const todayForecast = data.forecast.forecastday[0];
